@@ -1,0 +1,112 @@
+/*
+Colors Used:
+	#25CED1 = Blue
+	#FF8A5B = Orange
+	#5A6267 = Grey
+	#FCEADE = Beige
+	#EA526F = Pink
+
+ Fonts Used:
+	Main headers = Righteous
+	Body text = Roboto Condensed
+*/
+
+body{
+	width:960px;
+	margin:auto;
+	background-color: #25CED1;
+	text-align: center
+}
+
+img{
+	height: 150px;
+	width: 150px;
+}
+
+.links{
+	color:white;
+	font-family: "Roboto Condensed", sans-serif;
+	padding: 0px 10px 0px 10px;
+}
+
+a:hover { 
+    text-decoration: none;
+    color:#FF8A5B;;
+}
+
+
+/*Headers*/
+h1 {
+	font-family: "Righteous", cursive;
+	color:white;
+	font-size: 120px;
+	margin-top:40px;
+}
+
+#survey-header{
+	font-size: 80px;	
+}
+
+h2{
+	font-family: "Righteous", cursive;
+}
+
+p, h6 {
+	color:#FCEADE;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 18px;
+	margin:30px 0px 30px 0px;
+}
+
+p{
+	margin: 40px 50px 60px 50px;
+	text-align: justify;
+}
+
+/*Survey Form*/
+.primary-questions, .secondary-questions, 
+.tertiary-questions {
+	background-color: #EA526F;
+	padding:20px;
+	color:white;
+	margin:20px 0px 20px 0px;
+	border-radius: 25px;
+}
+
+.secondary-questions{
+	background-color: #FF8A5B;
+}
+
+.tertiary-questions{
+	background-color: white;
+	color:#5A6267
+}
+
+.tertiary-questions h6 {
+	color:#5A6267;
+}
+
+#top-of-form {
+	font-family: "Roboto Condensed", sans-serif;
+	margin-top:50px;
+}
+
+.form-control{
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/*Buttons*/
+#submit-button{
+	padding:10px;
+	color:white;
+	border-radius: 15px;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 20px;
+	background-color: #FF8A5B;
+	border:none;
+}
+
+#submit-button:hover{
+	background-color:#5A6267;
+}

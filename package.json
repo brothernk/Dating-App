@@ -1,0 +1,27 @@
+{
+  "name": "Dating-App",
+  "version": "1.0.0",
+  "description": "UMN Bootcamp Fullstack Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brothernk/Dating-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brothernk/Dating-App/issues"
+  },
+  "homepage": "https://github.com/brothernk/Dating-App#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
+}
