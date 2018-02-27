@@ -11,7 +11,6 @@ Colors Used:
 	Body text = Roboto Condensed
 */
 
-
 html{
 	height: 100%;
 }
@@ -26,11 +25,6 @@ body{
 	text-align: center
 }
 
-#survey-page{
-	border-left: 10px dotted white;
-	border-right: 10px dotted white;
-}
-
 footer{
 	grid-row-start: 2;
 	grid-row-start:3;
@@ -38,8 +32,11 @@ footer{
 }
 
 #homepage-footer{
-	margin:0px -250px 0px -250px;
 	border-top:10px dotted white;
+	width: 900px;
+	margin:auto;
+	margin-top:30px;
+	padding-top: 15px;
 }
 
 /*Logo =====================================================*/
@@ -52,6 +49,7 @@ footer{
 	background-size:contain;
 	margin:auto;
 	background-position: center;
+	margin-top: 7%;
 	margin-bottom: 5%;
 }
 
@@ -81,7 +79,10 @@ h1 {
 }
 
 #survey-header{
-	font-size: 80px;	
+	font-size: 80px;
+	margin-top:20px;
+	padding-bottom: 30px;
+	border-bottom:10px dotted white;	
 }
 
 h2{
@@ -96,9 +97,7 @@ p, h6 {
 }
 
 p{
-	margin: 40px 20px 60px 20px;
 	color: white;
-	margin:auto;
 	margin-top:50px;
 	margin-bottom: 50px;
 }
@@ -129,7 +128,7 @@ p{
 
 #top-of-form {
 	font-family: "Roboto Condensed", sans-serif;
-	margin-top:50px;
+	margin-top:30px;
 }
 
 .form-control{
@@ -138,8 +137,31 @@ p{
 	font-family: "Roboto Condensed", sans-serif;
 }
 
+.form-control:focus{
+	box-shadow: none;
+	border:1px solid lightgrey;
+}
+
+/*Dropdown Items ===========================================*/
+
+.dropdown-menu{
+	background-color: white;
+	border:1px solid lightgrey;
+}
+
 .dropdown-item{
-	color:#EA526F;
+	color:#5A6267;
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.dropdown-item:hover{
+	color:#FF8A5B;
+}
+
+.dropdown-item:active{
+	background-color:#FF8A5B;
+	color:white;
 }
 
 /*Button ==================================================*/
