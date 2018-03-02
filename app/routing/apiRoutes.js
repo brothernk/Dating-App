@@ -1,24 +1,16 @@
 //Loads the friend data
-var friendArray = require("../data/friends");
+var friends = require("../data/friends");
 
 //Routing
 module.exports = function(app) {
   
   //API GET
-  app.get("/api/friends", function(request, response) {
-    response.json(friendArray);
+  app.get("/api/friendinfo", function(request, response) {
+    response.json(friends);
   });
 
   // API POST 
-  app.post("/api/friends", function(request, response) {
- 
-    if (tableData.length < 5) {
-      tableData.push(req.body);
-      response.json(true);
-    }
-    else {
-      waitListData.push(req.body);
-      response.json(false);
-    }
+  app.post("/api/friendinfo", function(request, response) {
+    console.log("holla");
   });
 };

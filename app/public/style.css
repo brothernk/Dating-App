@@ -144,24 +144,19 @@ p{
 
 /*Dropdown Items ===========================================*/
 
-.dropdown-menu{
-	background-color: white;
-	border:1px solid lightgrey;
-}
-
-.dropdown-item{
-	color:#5A6267;
-	text-transform: uppercase;
-	font-family: "Roboto Condensed", sans-serif;
-}
-
-.dropdown-item:hover{
-	color:#FF8A5B;
-}
-
-.dropdown-item:active{
-	background-color:#FF8A5B;
+.custom-select{
+	background-color: #5A6267;
 	color:white;
+	width:200px;
+	border:none;
+}
+
+.custom-select:focus{
+	box-shadow: none;
+}
+
+.custom-select:hover{
+	background-color: #51585c;
 }
 
 /*Button ==================================================*/
