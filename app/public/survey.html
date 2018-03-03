@@ -190,18 +190,16 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Your Perfect Match</h5>
+              <h5 class="modal-title" id="exampleModalLabel">YOUR NEW FRiEND</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <div id="friend-name"></div>
-              <div id="friend-image"></div>
+              <div id="friend-image"><img src="https://cdn.vox-cdn.com/thumbor/-wFBa_rbvwa6x5U-1aCxP8o3ofc=/0x51:1019x624/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/46354036/fr.0.jpg" alt="Your Friend's Picture"></div>
+              <div id="friend-name">Imperator Furiosa</div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
@@ -210,7 +208,7 @@
   </div>
 
 <footer>
-  <a href="https://friend-finder-kab.herokuapp.com/api/friends" class="links">API FRiENDS LiST •</a>
+  <a href="/api/friends" class="links">API FRiENDS LiST •</a>
   <a href="https://github.com/afhaque/friendfinder" class="links">GiTHUB REPO</a>
 </footer>
 
@@ -222,40 +220,38 @@
 <!-- Capture Form Data -->
 <script type="text/javascript">
 
-  $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-
   $("#submit-button").on("click", function(event) {
     event.preventDefault();
+
+      var friendScores = (parseInt($("#question-one").val().trim())) +
+        (parseInt($("#question-two").val().trim())) + (parseInt($("#question-three").val().trim())) +
+        (parseInt($("#question-four").val().trim())) + (parseInt($("#question-five").val().trim())) +
+        (parseInt($("#question-six").val().trim())) + (parseInt($("#question-seven").val().trim())) +
+        (parseInt($("#question-eight").val().trim())) + (parseInt($("#question-nine").val().trim())) +
+        (parseInt($("#question-ten").val().trim()));
+
+      //Will be returning to clean up and condense this code later. Priority right now is making sure the
+      //app functions.
 
       // Grab Form Elements
       var newFriend = {
         friendName: $("#input-name").val().trim(),
         friendImage: $("#input-image").val().trim(),
-        firstQuestion: $("#question-one").val().trim(),
-        secondQuestion: $("#question-two").val().trim(),
-        thirdQuestion: $("#question-three").val().trim(),
-        fourthQuestion: $("#question-four").val().trim(),
-        fifthQuestion: $("#question-five").val().trim(),
-        sixthQuestion: $("#question-six").val().trim(),
-        seventhQuestion: $("#question-seven").val().trim(),
-        eigthQuestion: $("#question-eight").val().trim(),
-        ninthQuestion: $("#question-nine").val().trim(),
-        tenthQuestion: $("#question-ten").val().trim()
+        friendScores
       };
       
       console.log(newFriend);
 
       //Server Repsonse
-      $.post("/api/friendinfo", newFriend,
-        function(data) {
+      $.post("/api/friends", newFriend,)
+        .then(function(data) {
 
-        console.log("This data has been added to the API");
-         
-      });
+        console.log("This data has been added to the API:" + data);
 
-       // Clear Form
+        $("#friend-name").text("data.name");
+        $("#friend-image").attr("src", data.image);
+
+      // Clear Form
         $("#input-name").val("");
         $("#input-image").val("");
         $("#question-one").val("Select an Option");
@@ -267,49 +263,9 @@
         $("#question-seven").val("Select an Option");
         $("#question-eight").val("Select an Option");
         $("#question-nine").val("Select an Option");
-        $("#question-ten").val("Select an Option"); 
+        $("#question-ten").val("Select an Option");     
+      });  
   });
-
-  function createFriendInfo() {
-      //Location of Root Page
-      var currentURL = window.location.origin;
-
-      //AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-      $.ajax({ url: currentURL + "/api/friendinfo", method: "GET" })
-      .then(function(friends) {
-
-        // Here we are logging the URL so we have access to it for troubleshooting
-        console.log("------------------------------------");
-        console.log("URL: " + currentURL + "/api/friendinfo");
-        console.log("------------------------------------");
-
-        // Here we then log the NYTData to console, where it will show up as an object.
-        console.log(friends);
-        console.log("------------------------------------");
-
-      });
-    }
-
-    function clearData() {
-
-      var currentURL = window.location.origin;
-      $.ajax({ url: currentURL + "/api/clear", method: "POST" });
-
-    }
-
-    $("#clear").on("click", function() {
-      alert("Clearing...");
-      clearData();
-
-      // Refresh the page after data is cleared
-      location.reload();
-
-    });
-
-
-    // Run Queries!
-    // ==========================================
-    createFriendInfo();
 
 </script>
 

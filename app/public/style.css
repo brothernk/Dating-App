@@ -175,3 +175,36 @@ p{
 #submit-button:hover{
 	background-color:#5A6267;
 }
+
+/*Modal ==================================================*/
+
+.modal-content{
+	font-family: "Righteous", cursive;
+	border-radius: 25px;
+	background-color:#25CED1;
+	color:white;
+	border:5px solid white;
+}
+
+.modal-header, .modal-footer{
+	border:none;
+}
+
+.modal-title{
+	text-indent: 70px;
+	font-size:35px;
+	margin:10px 0px -10px 0px;
+}
+
+img{
+	border-radius: 25px;
+	width:325px;
+	height: 325px;
+}
+
+#friend-name{
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	font-size:25px;
+	margin:20px 0px -25px 0px;
+}
