@@ -229,9 +229,6 @@
         (parseInt($("#question-eight").val().trim())) + (parseInt($("#question-nine").val().trim())) +
         (parseInt($("#question-ten").val().trim()));
 
-      //Will be returning to clean up and condense this code later. Priority right now is making sure the
-      //app functions.
-
       // Grab Form Elements
       var newFriend = {
         friendName: $("#input-name").val().trim(),
@@ -251,18 +248,8 @@
         $("#friend-image").attr("src", data.image);
 
       // Clear Form
-        $("#input-name").val("");
-        $("#input-image").val("");
-        $("#question-one").val("Select an Option");
-        $("#question-two").val("Select an Option");
-        $("#question-three").val("Select an Option");
-        $("#question-four").val("Select an Option");
-        $("#question-five").val("Select an Option");
-        $("#question-six").val("Select an Option");
-        $("#question-seven").val("Select an Option");
-        $("#question-eight").val("Select an Option");
-        $("#question-nine").val("Select an Option");
-        $("#question-ten").val("Select an Option");     
+        $("#input-name, #input-image").val("");
+        $("#question-one, #question-two, #question-three, #question-four, #question-five, #question-six, #question-seven, #question-eight, #question-nine, #question-ten").val("Select an Option");  
       });  
   });
 
