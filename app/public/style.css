@@ -12,6 +12,7 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	align-content: center;
 	padding:10px;
 }
 
@@ -35,19 +36,16 @@ footer{
 }
 
 /*Logo =====================================================*/
-#logo{
-	background-image: url("surveyicon.png");
-	background-repeat: no-repeat;
-	height:150px;
-	width:150px;
-	background-size:contain;
-	margin:auto;
-	background-position: center;
+i{
+	font-size:100px;
+	color:#FF8A5B;
+	margin:0 auto;
 }
 
-#logo:hover{
-	background-image: url("surveyiconcolor.png");
-	transition: .25s;
+i:hover {
+	color:#FCEADE;
+	font-size: 98px;
+	transition: .15s;
 }
 
 /*Navigation ================================================*/
@@ -57,7 +55,8 @@ footer{
 
 a:hover { 
     text-decoration: none;
-    color:#FF8A5B;;
+	color:#FF8A5B;
+	transition: .15s;
 }
 
 /*Text ===================================================*/
@@ -190,11 +189,16 @@ img{
 	}
 	#homepage {
 		justify-content: center;
+		align-items: center;
 	}
-    #logo{
-		height: 60px;
-		width:60px;
+	i {
+		font-size:70px;
+		padding:20px 0;
 	}
+	i:hover{
+		font-size: 70px;
+	}
+
 	footer{
 		display: none;
 	}
